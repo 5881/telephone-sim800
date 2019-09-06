@@ -14,3 +14,22 @@ Easy "clone and go" repository for a libopencm3 based project.
 # As a template
 You should replace this with your _own_ README if you are using this
 as a template.
+
+Мобильный телефон на базе модуля SIM800
+микроконтроллер stm32f103c8t6
+экран st7735 128x160
+
+Возможности:
+- совершать звонки
+- принимать звонки
+- отправлять смс (ru/eng)
+- принимать смс (ru/eng)
+- телефонная книга с функцией быстрого набора
+- 8мб flash памяти 
+- вывод картинок bmp из flash памяти
+- запись файлов в память по протоколу xmodem через UART
+
+
+Проэкт предоставляется как есть без каких либо гарантий
+
+Код написан на C с использованием библиотеки libopencm3
