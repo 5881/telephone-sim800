@@ -640,17 +640,17 @@ void tel_book_init(void){
 	w25_read(0x00,init_tst,96);
 	for(uint8_t i=0;i<96;i++) if(init_tst[i]!=0xff) return;
 	d();	
-	w25_write_str(0x00, "me");
+	w25_write_str(0x00, "aa");
 	d();
-	w25_write_str(0x10, "8_telephone");
+	w25_write_str(0x10, "xxxxxxxxxxx");
 	d();
-	w25_write_str(0x20, "ma");
+	w25_write_str(0x20, "bb");
 	d();
-	w25_write_str(0x30, "8_telephone");
+	w25_write_str(0x30, "8xxxxxxxxxx");
 	d();
-	w25_write_str(0x40, "Masha");
+	w25_write_str(0x40, "cc");
 	d();
-	w25_write_str(0x50, "8_telephone");
+	w25_write_str(0x50, "8xxxxxxxxxx");
 	}
 
 
