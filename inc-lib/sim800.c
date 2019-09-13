@@ -231,22 +231,6 @@ void fast_sms_send(char *text,char *tel){
 
 
 
-void int_to_char(uint16_t ch, char *data){
-	static const char table[]="0123456789ABCDEF";
-	uint8_t a;
-	uint16_t c=ch;
-	stprintf("\a");
-	for(uint8_t i=0; i<4;i++){
-		a=ch&0xf;
-		stprintf("a=%x\r\n",a);
-		ch>>=1;
-		data[3-i]=table[a];
-	}
-	data[4]=0;
-	stprintf("%x, str=%s",c,data);
-	for (uint32_t i=0;i<0xffffff;i++)__asm__("nop");
-}
-
 uint16_t char_to_int16(char *data){
 	uint16_t result=0;
 	uint8_t temp=0;
@@ -310,7 +294,7 @@ void utc2_to_cp866(char *data){
 			}
 		data[j++]=l;
 		//st7735_sendchar(l);
-		//это отладочные ыункции
+		//это отладочные функции
 		//stprintf("result char is \"%c\"\r\n",l);
 		//temp[j++]=l;
 		//for(uint32_t j=0;j<0xfffff;j++)__asm__("nop");

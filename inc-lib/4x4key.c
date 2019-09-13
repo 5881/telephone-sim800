@@ -224,7 +224,7 @@ char get_key(){
 					}
 			else {count=0; break;}
 		key=keymap2(count,2);
-		//визуализация
+		//виртуальный вывод
 #ifdef ECHO
 		systick_interrupt_disable();
 		st7735_virt_sendchar(key);
@@ -236,7 +236,7 @@ char get_key(){
 		timer_stop();	//останавливаем прерывания таймера
 		}
 		 	
-	else{//'\n' обраюатывать сразу code 0x0001
+	else{
 #ifdef ECHO
 		st7735_virt_sendchar(key);
 #endif

@@ -425,8 +425,7 @@ void st7735_drawchar_x2(unsigned char x,unsigned char y,char chr,
 	st7735_addrset(x,y,x+11,y+15);
 	gpio_set(GPIOA,DC);
 	
-	//делаем масштабируемый шрифт
-	//в переменной temp содержится одна линия символа
+	
 	for(uint8_t j=0;j<8;j++){
 		for(uint8_t k=0;k<2;k++){
 			for(uint8_t i=0;i<6;i++){
@@ -464,8 +463,6 @@ void st7735_drawchar_x3(unsigned char x,unsigned char y,char chr,
 	st7735_addrset(x,y,x+17,y+23);
 	gpio_set(GPIOA,DC);
 	
-	//делаем масштабируемый шрифт
-	//в переменной temp содержится одна линия символа
 	for(uint8_t j=0;j<8;j++){
 		for(uint8_t k=0;k<3;k++){
 			for(uint8_t i=0;i<6;i++){

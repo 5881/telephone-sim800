@@ -458,7 +458,7 @@ void usart1_isr(void){
 		//}
 	if(c=='\n'){
 		usartrxbufer[i]=0x00;
-		//ищем патернзавершенной командыы
+		//ищем патерн завершенной команды
 		if(i>5){
 		
 		if(strstr(usartrxbufer-5+i,"OK\r\n")) rcv_cmd_ok=1;
