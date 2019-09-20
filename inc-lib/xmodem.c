@@ -62,12 +62,12 @@ void xmodem_to_flash(uint32_t addr){
 	while(1){
 	ch = usart_recv_blocking(USARTX); //принимаем первый символ
 	if (ch==SOH){					//если начало передачи 
-		//if(byte) w25_write(addr+byte,buf+2,128);//предидущий пакет полный
+		//if(byte) w25_write(addr+byte,buf+2,128);//предыдущий пакет полный
 		
 		for(uint8_t i=0;i<131;i++){ //принимаем пакет
 			ch = usart_recv_blocking(USARTX);
 			buf[i]=ch;}
-		//w25_write(addr+byte,buf+2,128);//предидущий пакет полный
+		//w25_write(addr+byte,buf+2,128);//предыдущий пакет полный
 		lastlen=129;
 		while(buf[lastlen]==EOF) lastlen--; //отбрасываем EOF
 		lastlen-=1;							//находим длинну пакета
