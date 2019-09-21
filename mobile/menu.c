@@ -358,16 +358,18 @@ void sim800_menu(void){
 void main_help_menu(void){
 	stprintf("\aHELP\r\n"
 						//"# - erising chip\r\n"
-						"a - ATA\r\n"
-						"h - ATH\r\n"
+						"~ - ATA\r\n"
+						"! - ATH\r\n"
 						"1 - data menu\r\n"
 						"2 - call menu \r\n"
 						"3 - img menu\r\n"
 						"4 - power menu\r\n"
 						"5 - sim800 menu\r\n"
-						"6 - gsm power\r\n"
-						"7 - power off\r\n"
-						"* - call\r\n"
+						"6 - help\r\n"
+						"7 - sim800 PWR\r\n"
+						"8 - sleep\r\n"
+						"9 - sleep logo\r\n"
+						"* - tel book\r\n"
 						"0 - sms menu");
 	
 	}
@@ -414,8 +416,8 @@ void get_keybord_cmd(void){
 			sms_menu();
 			break;
 		case '*':
-			call();
-			//telbook_menu();
+			//call();
+			telbook_menu();
 			break;
 		case '~':
 			sim800_take_call();
@@ -450,7 +452,7 @@ void telbook_menu(void){
 	key=fast_get_key();
 		
 	switch (key){
-						case '~':
+			case '~':
 				telbook_rec_add();
 				break;
 			case '!':
